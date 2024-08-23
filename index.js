@@ -9,9 +9,15 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.urlencoded({ extended: true }));
-
+const routes = require('./routes/routes')
+let word = "yeeeeeeee";
+if(routes){
+word = "routes gooted"
+}
+else{
+   word = "yee"}
 app.get('/', (req, res) => {
-   res.render('index', { title: "yeeeeeeeeee" });
+   res.render('index', { title: word });
 });
 
 app.listen(3000, () => {
