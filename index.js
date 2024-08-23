@@ -8,7 +8,8 @@ app.set('views', __dirname + '/view')
 app.use(express.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Home is home' })
+   try{ res.render('index', { title: 'Home is home' })}
+    catch(ex){res.send("<h1>error == "+ex+"</h1>")}
 })
 
 app.listen(3000, () => {
