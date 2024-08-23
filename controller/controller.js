@@ -3,7 +3,7 @@ const app = express()
 //const collection = require('../model/model')
 
 const home = async (req, res) => {
-    res.render('index',{title: "Collection goted and the error is = "s});
+    res.render('index',{title: "Collection goted and the error is = "});
     /*try {
         const result = await collection.find({})
         if(result){res.render('index', { name: "", result })}
@@ -54,4 +54,4 @@ const remove = async (req, res) => {
 }
 */
 //, shorten, newpage, remove 
-module.exports = { home}
+module.exports = {home}
