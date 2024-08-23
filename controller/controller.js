@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-//const collection = require('../model/model')
+const collection = require('../model/model')
 
 const home = async (req, res) => {
     try {
