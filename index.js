@@ -11,7 +11,9 @@ app.set('views', path.join(__dirname, 'views')); // Ensure views folder exists
 app.use(express.urlencoded({ extended: true }));
 
 const routes = require('./routes/routes'); // Ensure routes file exports a router
-app.use('/', routes);
+app.get('/', (req, res) => {
+   res.render('index', { title: "yeeeeeeeeee" });
+});
 
 app.listen(3000, () => {
     console.log('Server running on port ' + 3000);
