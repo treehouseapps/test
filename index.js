@@ -1,16 +1,16 @@
 const express = require('express');
 const app = express();
-require('dotenv').config(); // Ensure .env exists if used
+require('dotenv').config();
 const path = require('path');
 
-app.use(express.static(path.join(__dirname, 'public'))); // Ensure public folder exists
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs'); // Ensure ejs is installed
-app.set('views', path.join(__dirname, 'views')); // Ensure views folder exists
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.urlencoded({ extended: true }));
 
-const routes = require('./routes/routes'); // Ensure routes file exports a router
+//const routes = require('./routes/routes');
 app.get('/', (req, res) => {
    res.render('index', { title: "yeeeeeeeeee" });
 });
