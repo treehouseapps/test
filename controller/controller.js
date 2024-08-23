@@ -1,15 +1,17 @@
 const express = require('express')
 const app = express()
 const collection = require('../model/model')
-
+if(collection){let word = "noooooo"}
+else{word = "ysssss"}
 const home = async (req, res) => {
-    try {
+    res.render('index',{title: "Collection goted and the error is = "+word});
+    /*try {
         const result = await collection.find({})
         if(result){res.render('index', { name: "", result })}
       else{res.render.('index),{title: "collection goted but no file from DB"}
     }
     catch (ex) {  res.render('index',{title: "Collection goted and the error is = "+ex}); }
-    
+    */
     
 }
 /*
