@@ -17,7 +17,7 @@ const schema = new mongoose.Schema({
     },
     newLink: {
         type: String
-    },
+    }
 })
 const collection = new mongoose.model('link', schema)
 
