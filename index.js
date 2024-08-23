@@ -5,12 +5,12 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
-/*app.set('views', path.join(__dirname, 'views'));
 
+app.set('views', path.join(__dirname, '/views'));
 
-*/
 app.get('/', (req, res) => {
-   res.send('<h1>index</h1>');
+  try{ res.render('index');}
+   catch(er){res.send(er)}
 });
 
 app.listen(3000, () => {
