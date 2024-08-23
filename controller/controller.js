@@ -3,13 +3,14 @@ const app = express()
 //const collection = require('../model/model')
 
 const home = async (req, res) => {
-  /*  try {
+    try {
         const result = await collection.find({})
-        res.render('index', { name: "", result })
+        if(result){res.render('index', { name: "", result })}
+      else{res.render.('index),{title: "collection goted but no file from DB"}
     }
-    catch (ex) { res.send("error is here ==== " + ex) }
-    */
-    res.render('index',{title: "Collection goted"}); 
+    catch (ex) {  res.render('index',{title: "Collection goted and the error is = "+ex}); }
+    
+    
 }
 /*
 const character = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
