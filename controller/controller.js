@@ -3,12 +3,15 @@ const app = express()
 const collection = require('../model/model')
 
 const home = async (req, res) => {
-    try {
+  /*  try {
         const result = await collection.find({})
         res.render('index', { name: "", result })
     }
     catch (ex) { res.send("error is here ==== " + ex) }
+    */
+    res.render('index',{title: "Collection goted"}); 
 }
+/*
 const character = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 
 const shorten = async (req, res) => {
@@ -47,5 +50,6 @@ const remove = async (req, res) => {
     await collection.deleteOne({ _id: getid })
     res.redirect('/')
 }
-
-module.exports = { home, shorten, newpage, remove }
+*/
+//, shorten, newpage, remove 
+module.exports = { home}
