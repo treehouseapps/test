@@ -1,16 +1,14 @@
 const express = require('express');
 const app = express();
-require('dotenv').config();
 const path = require('path');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.set('view engine', 'ejs'); // Ensure ejs is installed
+app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.urlencoded({ extended: true }));
 
-//const routes = require('./routes/routes');
 app.get('/', (req, res) => {
    res.render('index', { title: "yeeeeeeeeee" });
 });
