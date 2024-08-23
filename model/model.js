@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 
-const DbLink = "mongodb+srv://Beki:78122775Beki@cluster0.6ypmi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const DbLink = "mongodb+srv://Beki:78122775Beki@cluster0.6ypmi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/link"
 
 mongoose.connect(DbLink)
     .then(() => console.log('Database Connected'))
