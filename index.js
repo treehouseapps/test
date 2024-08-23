@@ -11,13 +11,17 @@ app.set('view engine', 'ejs');
 
 app.set('views', path.join(__dirname, '/views'));
 
-/*app.get('/', (req, res) => {
+try{
+  app.use('/', routes)
+}
+catch(ex){
+  app.get('/', (req, res) => {
   try { res.render('index'); }
   catch (er) { res.send(er) }
 });
-*/
+console.log(ex)
+}
 
-app.use('/', routes)
 
 app.listen(3000, () => {
   console.log('Server running on port ' + 3000);
