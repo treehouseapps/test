@@ -7,7 +7,7 @@ app.set('view engine', 'ejs')
 app.set('views', __dirname + '/view')
 app.use(express.urlencoded({ extended: true }))
 
-server.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index', { title: 'Home is home' })
 })
 
