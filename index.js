@@ -10,7 +10,7 @@ app.set("views", "./views");
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-   res.send('index',{title:"yeeeeeeeeee"});
+   res.render('index',{title:"yeeeeeeeeee"});
 });
 
 app.listen(3000, () => {
