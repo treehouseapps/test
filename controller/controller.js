@@ -7,7 +7,7 @@ const home = async (req, res) => {
         const result = await collection.find({})
         res.render('index', { name: "", result })
     }
-    catch (ex) { console.log("error is here ==== " + ex) }
+    catch (ex) { res.send("error is here ==== " + ex) }
 }
 const character = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 
