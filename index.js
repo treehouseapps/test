@@ -9,11 +9,10 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.urlencoded({ extended: true }));
-const routes = require('./routes/newroutes')
+const routes = require('./routes/routes')
 let word = "yeeeeeeee";
-if(routes){
-word = "routes gooted"
-}
+import route from "./routes/routes.js";
+if(route){word = "route also"}
 else{
    word = "yee"}
 app.get('/', (req, res) => {
