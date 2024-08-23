@@ -20,5 +20,5 @@ const schema = new mongoose.Schema({
     }
 });
 
-const Collection = mongoose.model('Link', schema);
-module.exports = Collection
+const collection = new mongoose.model('link', schema)
+module.exports = collection
