@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, '/public')))
 //app.use(express.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
-   res.send("<h1 class="title">error == </h1>")
+   res.send('<h1 class="title">error == </h1>')
 })
 
 app.listen(3000, () => {
