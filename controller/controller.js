@@ -51,4 +51,4 @@ const remove = async (req, res) => {
     res.redirect('/')
 }
  shorten, newpage, remove */
-module.exports = {home}
+module.exports = home
