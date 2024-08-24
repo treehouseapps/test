@@ -4,7 +4,7 @@ const app = express()
 
 const home = async (req, res) => {
     res.render('index',{title: "Collection goted and the error is = "});
-})
+}
     /*try {
         const result = await collection.find({})
         if(result){res.render('index', { name: "", result })}
