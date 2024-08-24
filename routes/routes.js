@@ -2,7 +2,7 @@ const express = require("express")
 const app = express.Router()
 const word = "empty"
 try {
-  const home = require('./controller/controller');
+  const home = require('./controller');
   if (home) {
     word = "controller goted ... from router";
   }
