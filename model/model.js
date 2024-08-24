@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 //mongodb+srv://sarah:sarah@cluster0.xr5qdwo.mongodb.net/URL
 try {
-    mongoose.connect('mongodb+srv://Beki:78122775Beki@cluster0.6ypmi.mongodb.net/link'
+    mongoose.connect('mongodb+srv://sarah:sarah@cluster0.xr5qdwo.mongodb.net/URL'
         .then(() => console.log('Database Connected'))
         .catch(err => console.log(err));
 } catch (error) {
@@ -11,17 +11,18 @@ try {
 }
 
 const schema = new mongoose.Schema({
-    link: {
-        type: String,
-        required: true // Optional: Add validation if needed
+    long: {
+      type: String,
+      required: true
     },
-    generated: {
-        type: String,
-        required: true // Optional: Add validation if needed
+    short: {
+      type: String,
+      required: true
     },
-    newLink: {
-        type: String,
-        required: true // Optional: Add validation if needed
+    code: {
+      type: String,
+      required: true,
+      unique: true
     }
 });
 
