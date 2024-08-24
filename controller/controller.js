@@ -1,9 +1,10 @@
 const express = require('express')
 const app = express()
-//const collection = require('../model/model')
+const collection = require('../model/model.js')
 
 const home = async (req, res) => {
-    res.render('index',{title: "Collection goted and the error is = "});
+    const result = await collection.find()
+    res.render('index', { result })
 }
 
     module.exports = home
