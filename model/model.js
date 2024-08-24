@@ -1,25 +1,31 @@
-const express = require('express')
-const app = express()
-const mongoose = require('mongoose')
-try {
-    mongoose.connect('mongodb+srv://Beki:78122775Beki@cluster0.6ypmi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/link')
-        .then(console.log('Database Connected'))
-        .catch(err => { console.log(err) })
-} catch {
-    console.log("errrrrrrrrrrrr")
-}
+const express = require('express');
+const mongoose = require('mongoose');
+
+const app = express();
+
+mongoose.connect('mongodb+srv://Beki:78122775Beki@cluster0.6ypmi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/link')
+    .then(() => {
+        console.log('Database Connected');
+    })
+    .catch(err => {
+        console.error('Database connection error:', err);
+    });
+
 const schema = new mongoose.Schema({
     link: {
-        type: String
+        type: String,
+        required: true // Example of adding validation
     },
     generated: {
-        type: String
+        type: String,
+        required: true // Example of adding validation
     },
     newLink: {
-        type: String
-    }
-})
-const collection = new mongoose.model('link', schema)
+        type: String,
+        required: true // Example of adding validation
+    },
+});
 
-module.exports = collection
+const collection = mongoose.model('link', schema);
 
+module.exports = collection;
