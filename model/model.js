@@ -22,7 +22,7 @@ const schema = new mongoose.Schema({
     newLink: {
         type: String,
         required: true // Optional: Add validation if needed
-    },
+    }
 });
 
 const collection = mongoose.model('link', schema);
