@@ -1,5 +1,29 @@
 const express = require('express')
 const app = express()
+
+const collection = require('../model/model')
+if (collection.length > 0) {
+    console.log("greater than 3")
+}
+
+const home = async (req, res) => {
+    const result = await collection.find()
+    if (result.length > 0) {
+        res.render('index', { result })
+    }
+    else { 
+        console.log("i am in collection home")
+        res.render('index', { title: " no data" })
+    console.log("i even render it")}
+}
+
+module.exports = home ;
+console.log("this is home length "+home.length)
+
+
+
+/*const express = require('express')
+const app = express()
 const collection = require('../model/model')
 
 const home = async (req, res) => {
@@ -49,3 +73,4 @@ const remove = async (req, res) => {
 }
 
 module.exports = { home, shorten, newpage, remove }
+*/
