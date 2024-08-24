@@ -4,16 +4,14 @@ const app = express()
 
 const home = async (req, res) => {
     res.render('index',{title: "Collection goted and the error is = "});
+})
     /*try {
         const result = await collection.find({})
         if(result){res.render('index', { name: "", result })}
       else{res.render.('index),{title: "collection goted but no file from DB"}
     }
     catch (ex) {  res.render('index',{title: "Collection goted and the error is = "+ex}); }
-    */
-    
-}
-/*
+
 const character = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 
 const shorten = async (req, res) => {
@@ -52,6 +50,5 @@ const remove = async (req, res) => {
     await collection.deleteOne({ _id: getid })
     res.redirect('/')
 }
-*/
-//, shorten, newpage, remove 
+ shorten, newpage, remove */
 module.exports = {home}
