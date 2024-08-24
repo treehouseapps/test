@@ -10,7 +10,7 @@ catch (ex){
 
 const home = " helo world in controller"
 }
-    
+    module.exports = home
     /*try {
         const result = await collection.find({})
         if(result){res.render('index', { name: "", result })}
@@ -57,4 +57,3 @@ const remove = async (req, res) => {
     res.redirect('/')
 }
  shorten, newpage, remove */
-module.exports = home
