@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express.Router()
 
-const home = require('./controller');
+const home = require('../controller/controller.js');
   
 //, shorten, newpage, remove
 //app.post('/short', shorten)
