@@ -4,7 +4,10 @@ const collection = require('../model/model.js')
 
 const home = async (req, res) => {
     const result = await collection.find()
+    if(result){
     res.render('index', { result })
+    }
+    else{res.render('index', { title: " no data" })}
 }
 
     module.exports = home
